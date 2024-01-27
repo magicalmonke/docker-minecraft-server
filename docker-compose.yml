@@ -17,4 +17,11 @@ services:
       VERSION: "1.20.4"
       OPS: "swamp4frog"
       MOTD: "I'm not gay but $20 is $20..."
+      ENABLE_WHITELIST: "TRUE"
+      ENFORCE_WHITELIST: "TRUE"
+      MEMORY: "5G"
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 6G
